@@ -1,0 +1,11 @@
+<!-- 代码ui -->
+<view class="code-card">
+  <!-- 顶部，路径 -->
+  <view class="code-path">
+    <text>{{path}}</text>
+  </view>
+  <!-- 底部，代码内容 -->
+  <view class="code-data">
+    <text>{{code}}</text>
+  </view>
+</view>

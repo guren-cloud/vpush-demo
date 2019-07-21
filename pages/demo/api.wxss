@@ -1,0 +1,54 @@
+.input-box {
+  padding: 0 20px;
+}
+.input-box > text {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  color: #333;
+}
+.input-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-cell > input {
+  flex: 1;
+  background-color: #EFEFEF;
+  border: 1px solid #EEE;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #03BD70;
+}
+.del-button {
+  font-size: 12px;
+  color: #8B4FB5;
+  border-bottom: 1px dashed #8B4FB5;
+  margin: 0 10px;
+}
+
+.add-btn, .push-btn {
+  width: 100px;
+  height: 42px;
+  /* background-color: #03BD70; */
+  border: 1px solid #03BD70;
+  border-radius: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+.add-btn > text, .push-btn > text {
+  color: #03BD70;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.push-btn {
+  background-color: #03BD70;
+}
+.push-btn > text {
+  color: #FFF;
+}

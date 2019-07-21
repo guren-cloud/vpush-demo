@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "code-card": "/components/codecard",
+    "empty-footer": "/components/empty-footer",
+    "vpush-checkin": "/utils/vpush-pro-sdk/components/checkin"
+  },
+  "navigationBarTitleText": "今日签到组件演示"
+}

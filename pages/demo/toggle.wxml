@@ -1,0 +1,28 @@
+<view class="status-box">
+  <text>当前用户推送开关状态：</text>
+  <text>{{status}}</text>
+</view>
+
+<view class="status-btns">
+  <view class="item" hover-class="item-hover" bindtap="openHandler">
+    <text>开启</text>
+  </view>
+  <view class="item-spacer"></view>
+  <view class="item" hover-class="item-hover" bindtap="reloadHandler">
+    <text>刷新</text>
+  </view>
+  <view class="item-spacer"></view>
+  <view class="item" hover-class="item-hover" bindtap="closeHandler">
+    <text>关闭</text>
+  </view>
+</view>
+
+
+<code-card
+  wx:for="{{codes}}"
+  wx:key="index"
+  path="{{item.path}}"
+  code="{{item.code}}"
+/>
+
+<empty-footer />

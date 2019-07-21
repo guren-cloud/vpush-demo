@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/demo/checkin",
+    "pages/index/help",
+    "pages/demo/api",
+    "pages/demo/toggle",
+    "pages/demo/custom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "vPush demo",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

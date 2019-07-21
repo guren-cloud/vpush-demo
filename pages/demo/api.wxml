@@ -1,0 +1,37 @@
+<code-card
+  path="推送API简介"
+  code="您可以在vPush后台创建任务的推送API接口，然后在任意支持的地方集成使用，方便您的工作流操作。"
+/>
+
+<!-- 检查是否已经设置了API接口 -->
+<view wx:if="{{!api.url || !api.secret}}">
+  <code-card
+    path="请先初始化API信息"
+    code="请先在 /pages/demo/api.js 文件中设置推送接口的URL和SECRET"
+  />
+  
+  <code-card
+    path="初始化方式"
+    code="登陆您部署好的vPush平台，然后在推送接口那里进行创建，注意：推送目标请选择指定用户！然后在右下角代码示例那里可以看到接口的地址和密钥信息。 请复制填写到api.js文件的设置中。"
+  />
+</view>
+
+<view wx:else>
+  <view class='input-box'>
+    <text>推送的数据：</text>
+    <view wx:for="{{data}}" wx:key="{{index}}" class='input-cell'>
+      <text>（{{index+1}}）</text>
+      <input data-idx="{{index}}" value="{{item}}" bindinput='inputHandler'></input>
+      <vpush-view custom-class="del-button" data-idx="{{index}}" bindClickHandler="removeHandler">
+        <text>删除</text>
+      </vpush-view>
+    </view>
+
+    <vpush-view custom-class="add-btn" bindClickHandler="addHandler">
+      <text>+ 添加数据</text>
+    </vpush-view>
+    <vpush-view custom-class="push-btn" bindClickHandler="pushHandler">
+      <text>推送测试 ></text>
+    </vpush-view>
+  </view>
+</view>

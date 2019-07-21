@@ -1,0 +1,98 @@
+<!-- 头像 -->
+<view class="header">
+  <open-data type="userAvatarUrl" class="avatar"></open-data>
+  <open-data type="userNickName" class="nickname"></open-data>
+</view>
+
+<!-- 推送数据统计 -->
+<vpush-view custom-class="formid_box" bindClickHandler="loadCounts">
+  <view class="formid_body">
+    <!-- 1. 已用 -->
+    <view>
+      <text>已用</text>
+      <text>{{counts.used}}</text>
+    </view>
+    <!-- 2. 可用 -->
+    <view>
+      <text>可用</text>
+      <text>{{counts.avaliable}}</text>
+    </view>
+    <!-- 3. 过期 -->
+    <view>
+      <text>过期</text>
+      <text>{{counts.expired}}</text>
+    </view>
+  </view>
+  <view class="formid_footer">
+    <text>[当前用户的推送凭证数据，点击刷新]</text>
+  </view>
+</vpush-view>
+
+<!-- 尚未初始化 -->
+<view wx:if="{{!isInit}}" >
+  <view class="notinit-body">
+    <text>(⊙x⊙;) 尚未初始化</text>
+  </view>
+  <!-- 底部初始化说明 -->
+  <view class="notinit-help">
+    <text>1. 下载 vpush-pro-sdk 到小程序目录，如 utils 目录，已有请忽略</text>
+    <text>2. 编辑小程序的 app.js 文件</text>
+    <text>3. 引入 vpush2.basic.js 文件</text>
+    <text>4. 在 App 函数里初始化 vPush 对象，参数为您部署好的 vPush后端地址</text>
+    <text>5. 微信公众后台配置您的小程序 request 域名，添加您部署好的 vPush后端地址</text>
+  </view>
+</view>
+
+<!-- 如果是开发者工具 -->
+<view wx:elif="{{isDevTools}}" class="dev-warning">
+  <image src="/assets/warning.svg"></image>
+  <text>开发者工具无法获取推送凭证</text>
+  <text>请使用真机预览测试</text>
+</view>
+
+<!-- 操作菜单 -->
+<view wx:else>
+  <view class="menus">
+    <!-- 1. 今日签到 -->
+    <navigator url="/pages/demo/checkin" class="item">
+      <image src="/assets/menus/checkin.svg" class="menu-icon"></image>
+      <text>今日签到</text>
+      <image src="/assets/right.svg" class="menu-right"></image>
+    </navigator>
+    <view class="menu-spacer"></view>
+    <!-- 2. 自定义组件 -->
+    <navigator url="/pages/demo/custom" class="item">
+      <image src="/assets/menus/view.svg" class="menu-icon"></image>
+      <text>自定义组件</text>
+      <image src="/assets/right.svg" class="menu-right"></image>
+    </navigator>
+    <view class="menu-spacer"></view>
+    <!-- 3. 打开推送 -->
+    <navigator url="/pages/demo/toggle" class="item">
+      <image src="/assets/menus/notice.svg" class="menu-icon"></image>
+      <text>打开/关闭推送</text>
+      <image src="/assets/right.svg" class="menu-right"></image>
+    </navigator>
+    <view class="menu-spacer"></view>
+    <!-- 4. 推送API -->
+    <navigator url="/pages/demo/api" class="item">
+      <image src="/assets/menus/api.svg" class="menu-icon"></image>
+      <text>推送测试</text>
+      <image src="/assets/right.svg" class="menu-right"></image>
+    </navigator>
+    <view class="menu-spacer"></view>
+    <!-- 5. 帮助说明 -->
+    <navigator url="/pages/index/help" class="item">
+      <image src="/assets/menus/help.svg" class="menu-icon"></image>
+      <text>帮助说明</text>
+      <image src="/assets/right.svg" class="menu-right"></image>
+    </navigator>
+  </view>
+</view>
+
+
+
+<!-- 底部 -->
+<vpush-view custom-class="footer" bindClickHandler="copyURL">
+  <text>https://vpush.pro</text>
+</vpush-view>

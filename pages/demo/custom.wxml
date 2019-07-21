@@ -1,0 +1,14 @@
+<vpush-view custom-class="card-view" bindClickHandler="myClickHandler">
+  <image src='/assets/click.svg'></image>
+  <text>点击我收集凭证</text>
+</vpush-view>
+
+
+<code-card
+  wx:for="{{codes}}"
+  wx:key="index"
+  path="{{item.path}}"
+  code="{{item.code}}"
+/>
+
+<empty-footer />

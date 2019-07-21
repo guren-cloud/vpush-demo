@@ -1,0 +1,82 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.5",
+	"appid": "wxdedf326775a64728",
+	"projectname": "vpush-demo",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "今日签到",
+					"pathName": "pages/demo/checkin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自定义组件",
+					"pathName": "pages/demo/custom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "开关推送",
+					"pathName": "pages/demo/toggle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推送API",
+					"pathName": "pages/demo/api",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "帮助说明",
+					"pathName": "pages/index/help",
+					"scene": null
+				}
+			]
+		}
+	}
+}

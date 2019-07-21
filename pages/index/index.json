@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "vpush-view": "/utils/vpush-pro-sdk/components/view"
+  }
+}

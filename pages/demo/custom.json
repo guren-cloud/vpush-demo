@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "code-card": "/components/codecard",
+    "empty-footer": "/components/empty-footer",
+    "vpush-view": "/utils/vpush-pro-sdk/components/view"
+  },
+  "navigationBarTitleText": "自定义组件演示"
+}

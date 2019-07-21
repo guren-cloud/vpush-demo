@@ -1,0 +1,8 @@
+<code-card
+  wx:for="{{codes}}"
+  wx:key="index"
+  path="{{item.path}}"
+  code="{{item.code}}"
+/>
+
+<empty-footer />

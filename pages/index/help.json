@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "code-card": "/components/codecard",
+    "empty-footer": "/components/empty-footer"
+  },
+  "navigationBarTitleText": "帮助说明"
+}
